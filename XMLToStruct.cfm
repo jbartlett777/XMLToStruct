@@ -68,7 +68,14 @@ public any function XMLToStruct(required XML XMLObj, boolean CreateArrays=false)
 							Node["#Key#.XmlAttributes"][ArrayLen(Node[Key])]=Attribs;
 						} else {
 							// Set the attribs
-							Node["#Key#.XmlAttributes"]=Attribs;
+							if (Arguments.CreateArrays) {
+								// Create as an array
+								Node["#Key#.XmlAttributes"]=ArrayNew(1);
+								Node["#Key#.XmlAttributes"][1]=Attribs;
+							} else {
+								// Create as a struct
+								Node["#Key#.XmlAttributes"]=Attribs;
+							}
 						}
 					} else {
 						if (IsArray(Node["#Key#.XmlAttributes"]) EQ "NO") {
