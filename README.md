@@ -23,12 +23,12 @@ Syntax:
 	</received>
 </notes>
 ```
-<code>writeoutput(XML);</code><br>
+<code>writedump(XML);</code><br>
 <img width="442" height="463" alt="image" src="https://github.com/user-attachments/assets/ca1aa512-f9d8-421c-93cd-0cebc5edabd9" />
 
 XML Nodes that exist only once are not created as an array by default, but if *true* is passed as the second parameter to XMLToStruct, all nodes are created as arrays.
 
-<code>writeoutput(XML,true);</code><br>
+<code>writedump(XML,true);</code><br>
 <img width="510" height="562" alt="image" src="https://github.com/user-attachments/assets/12c6c141-443b-48d4-b0c1-aa82e9488705" />
 
 Taking a partial sample from [Microsoft Learn's site]([https://www.bennadel.com/blog/4193-ask-ben-converting-an-xml-document-into-a-nested-coldfusion-struct.htm](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms762271(v=vs.85)))
@@ -58,11 +58,11 @@ that contains complex structures including attributes.
 	<TotalAmount Currency="USD">1250.00</TotalAmount>
 </PurchaseOrder>
 ```
-<code>writeoutput(XML);</code><br>
+<code>writedump(XML);</code><br>
 <img width="780" height="1000" alt="image" src="https://github.com/user-attachments/assets/e2908448-2c69-43d4-9c3c-74daa4d0b522" />
 
 The XML Attributes variable is defined as an array if the node is also of an array. If a node doesn't have attributes while others do, the array element is defined as a null. The function <code>arrayIsDefined</code> can be used to determine the existance of it.
-<code>writeoutput(XML);</code><br>
+<code>writedump(XML);</code><br>
 ```xml
 <doc>
 	<item>a</item>
@@ -70,6 +70,6 @@ The XML Attributes variable is defined as an array if the node is also of an arr
 	<item>c</item>
 </doc>
 ```
-<code>writeoutput(XML);</code><br>
+<code>writedump(XML);</code><br>
 <img width="496" height="417" alt="image" src="https://github.com/user-attachments/assets/c05d2379-c754-4ea4-9d0b-1a897547d9cb" />
 
